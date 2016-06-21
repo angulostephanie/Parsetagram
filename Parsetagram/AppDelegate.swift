@@ -7,15 +7,36 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    var APP_ID: String! = "Parsetagram"
+    var MASTER_KEY: String! = "jkdkjdfskksdka"
+    var DOMAIN: String! = "frozen-atoll-64019.herokuapp.com"
+    //var currentUser = PFUser.currentUser()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        Parse.initializeWithConfiguration(
+            ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = self.APP_ID
+                configuration.clientKey = self.MASTER_KEY  // set to nil assuming you have not set clientKey
+                configuration.server = ("https://\(self.DOMAIN)/parse")
+            })
+        )
+       
+        
+        if PFUser.currentUser() != nil {
+            let navBar = (self.window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("navigationBar"))! as UIViewController
+            self.window?.rootViewController = navBar
+            print("current user is still signed in")
+        }
+        
         return true
     }
 
@@ -42,5 +63,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    //MARK: Facebook Integration
+    
+    //func applicationDidBecomeActive(application: UIApplication) {
+      //  FBSDKAppEvents.activateApp()
+   // }
+    
+    //func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+      //  return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+   // }
 }
 
