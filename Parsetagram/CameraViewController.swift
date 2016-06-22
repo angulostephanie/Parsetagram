@@ -9,28 +9,50 @@
 import UIKit
 import Parse
 
-class CameraViewController: UIViewController {
-
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @IBOutlet weak var photoView: UIImageView!
+   
+    @IBOutlet weak var captionField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    @IBAction func onChoosePhoto(sender: AnyObject) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        self.presentViewController(imagePicker, animated: true, completion: nil)
+    }
+
+    func imagePickerController(picker: UIImagePickerController,didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            photoView.contentMode = .ScaleAspectFit
+            photoView.image = pickedImage
+        }
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func onUpload(sender: AnyObject) {
+        let photo = photoView.image
+        Post.newPost(photo, withCaption: captionField.text) { (success: Bool, error: NSError?) in
+            if error != nil {
+                print("SUCCESS")
+            }
+            else {
+                print(error)
+                print("Didn't Upload :(")
+            }
+        }
     }
-    */
+    
+    
+    
 
 }

@@ -26,6 +26,7 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
     @IBAction func onTap(sender: AnyObject) {
         self.view.endEditing(true)
     }
@@ -43,22 +44,21 @@ class LoginViewController: UIViewController {
 
     @IBAction func onSignUp(sender: AnyObject) {
         let newUser = PFUser()
-        
         // set user properties
         newUser.username = usernameField.text
         newUser.password = passwordField.text
         newUser.signUpInBackgroundWithBlock{(success: Bool, error: NSError?) -> Void in
             if success {
                 print("Yayy user has been created")
-                self.performSegueWithIdentifier("loginSegue", sender: nil)
+                self.performSegueWithIdentifier("signUpSegue", sender: nil)
             } else {
                 print(error?.localizedDescription)
                 if error?.code == self.userNameTakenError {
                     print("Username has already been taken")
+                    }
                 }
-            }
             
+            }
         }
-    }
     
 }
