@@ -17,8 +17,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //usernameField.becomeFirstResponder()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,30 +33,14 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsernameInBackground(usernameField.text!, password: passwordField.text!) { (user: PFUser?, error: NSError?) -> Void in
             
             if user != nil {
-                print("You are now logged in")
-                self.performSegueWithIdentifier("loginSegue", sender: nil)
+                print("You are now logged in - Log View Controller")
+            self.performSegueWithIdentifier("loggingInSegue", sender: nil)
             }
             
         }
     }
-
+    
     @IBAction func onSignUp(sender: AnyObject) {
-        let newUser = PFUser()
-        // set user properties
-        newUser.username = usernameField.text
-        newUser.password = passwordField.text
-        newUser.signUpInBackgroundWithBlock{(success: Bool, error: NSError?) -> Void in
-            if success {
-                print("Yayy user has been created")
-                self.performSegueWithIdentifier("signUpSegue", sender: nil)
-            } else {
-                print(error?.localizedDescription)
-                if error?.code == self.userNameTakenError {
-                    print("Username has already been taken")
-                    }
-                }
-            
-            }
-        }
+        self.performSegueWithIdentifier("newUserSegue", sender: nil)    }
     
 }

@@ -14,6 +14,9 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var usernameLabel2: UILabel!
+    @IBOutlet weak var captionLabel: UILabel!
+    
+   // @IBOutlet weak var networkerrorLabel: UILabel!
     
  
     

@@ -16,35 +16,53 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="JZg-Bd-6Pg">
                                 <rect key="frame" x="0.0" y="111" width="375" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UYB-VE-VNY">
-                                <rect key="frame" x="0.0" y="63" width="375" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                <state key="normal" title="Choose a photo"/>
-                                <connections>
-                                    <action selector="onChoosePhoto:" destination="vlk-g8-dYG" eventType="touchUpInside" id="59g-KE-0qD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="c0b-DG-7dc">
-                                <rect key="frame" x="0.0" y="581" width="375" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                <state key="normal" title="Upload Photo!"/>
-                                <connections>
-                                    <action selector="onUpload:" destination="vlk-g8-dYG" eventType="touchUpInside" id="2vQ-pL-UGp"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caption" textAlignment="natural" minimumFontSize="17" id="Vjs-kh-Pww">
                                 <rect key="frame" x="62" y="494" width="250" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="T6g-rW-ZAI">
+                                <rect key="frame" x="191" y="63" width="184" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Camera ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCamera:" destination="vlk-g8-dYG" eventType="touchUpInside" id="iGI-Hf-LCZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UYB-VE-VNY">
+                                <rect key="frame" x="0.0" y="63.5" width="191" height="50.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Library">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLibrary:" destination="vlk-g8-dYG" eventType="touchUpInside" id="K5c-g0-TUL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="c0b-DG-7dc">
+                                <rect key="frame" x="0.0" y="580" width="375" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Upload Photo!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onUpload:" destination="vlk-g8-dYG" eventType="touchUpInside" id="2vQ-pL-UGp"/>
+                                    <segue destination="b2B-QI-pMF" kind="modal" identifier="uploadedSegue" id="II1-cA-cDy"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.90178890520424015" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="camera" id="bdW-Xa-zRX"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -55,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C0R-1y-eTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="41.5" y="-392.5"/>
+            <point key="canvasLocation" x="579.5" y="-332.5"/>
         </scene>
         <!--Home-->
         <scene sceneID="CMb-na-scb">
@@ -65,46 +83,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="472" sectionHeaderHeight="28" sectionFooterHeight="28" id="wK2-GH-dAR">
-                                <rect key="frame" x="0.0" y="20" width="375" height="604"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="487" sectionHeaderHeight="28" sectionFooterHeight="28" id="wK2-GH-dAR">
+                                <rect key="frame" x="0.0" y="62" width="375" height="605"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Qk-7u-eI1">
+                                    <rect key="frame" x="0.0" y="579" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="472" id="gtW-fd-eIN" customClass="PostTableViewCell" customModule="Parsetagram" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="472"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="postCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="487" id="gtW-fd-eIN" customClass="PostTableViewCell" customModule="Parsetagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="487"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gtW-fd-eIN" id="izK-hb-pxF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="471.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="486.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="QbH-Di-U2o">
-                                                    <rect key="frame" x="0.0" y="32" width="375" height="375.5"/>
+                                                    <rect key="frame" x="0.0" y="33" width="375" height="375.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Like" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N6F-jY-1nM">
-                                                    <rect key="frame" x="20" y="415" width="31" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sWy-rx-iq2">
+                                                    <rect key="frame" x="14" y="8" width="339" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lc2-5W-D86">
-                                                    <rect key="frame" x="20" y="439" width="316" height="24"/>
+                                                    <rect key="frame" x="8" y="436" width="345" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sWy-rx-iq2">
-                                                    <rect key="frame" x="20" y="8" width="316" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Like" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N6F-jY-1nM">
+                                                    <rect key="frame" x="8" y="416" width="31" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="caption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="adf-vH-25H">
+                                                    <rect key="frame" x="76" y="437" width="269" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="captionLabel" destination="adf-vH-25H" id="8dd-Ce-v4J"/>
                                             <outlet property="photoView" destination="QbH-Di-U2o" id="SX1-JW-g7I"/>
                                             <outlet property="usernameLabel" destination="sWy-rx-iq2" id="I5I-6H-lUn"/>
                                             <outlet property="usernameLabel2" destination="Lc2-5W-D86" id="fUF-yY-Rk4"/>
@@ -113,18 +146,34 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.055440750453367826" blue="0.51728634470480928" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="0.75182845740000004" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="home" id="Ugl-Gg-iJD"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="OTT-MY-dKE"/>
                     <navigationItem key="navigationItem" id="6SS-zE-fPc"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="networkerrorLabel" destination="9Qk-7u-eI1" id="Sgp-qs-Ze6"/>
                         <outlet property="tableView" destination="wK2-GH-dAR" id="by2-Xc-K1h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0T-Ty-4Qc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="461.5" y="-1382.5"/>
+            <point key="canvasLocation" x="-9.5" y="-413.5"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="3Wc-ai-1wh">
+            <objects>
+                <viewController title="Details" id="0A2-62-J0t" customClass="DetailViewController" customModule="Parsetagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9xT-Xw-yEA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1JQ-mH-c7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1205.5" y="-1450.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="CeJ-KI-CWP">
@@ -135,7 +184,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" id="BdB-Sw-Ud7">
-                                <rect key="frame" x="62" y="251" width="253" height="30"/>
+                                <rect key="frame" x="62" y="295" width="250" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -143,8 +192,33 @@
                                     <action selector="onTap:" destination="Dhi-Q0-3Kn" eventType="editingDidEnd" id="lE2-bS-lRO"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gd5-dl-nP9">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="0.75182845744680848" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="New to Parsetagram? Sign Up ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSignUp:" destination="Dhi-Q0-3Kn" eventType="touchUpInside" id="J44-pk-Sfn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parsetagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jOQ-cQ-8tZ">
+                                <rect key="frame" x="0.0" y="100" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="50"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="vmi-DX-lSQ">
+                                <rect key="frame" x="62" y="350" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oje-mt-SrW">
-                                <rect key="frame" x="169" y="517" width="38" height="30"/>
+                                <rect key="frame" x="62" y="415" width="250" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="Login">
@@ -154,45 +228,100 @@
                                     <action selector="onLogin:" destination="Dhi-Q0-3Kn" eventType="touchUpInside" id="CYV-6I-q0i"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gd5-dl-nP9">
-                                <rect key="frame" x="84" y="564" width="209" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                <state key="normal" title="New to Parsetagram? Sign Up ">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onSignUp:" destination="Dhi-Q0-3Kn" eventType="touchUpInside" id="Tgm-6D-b8s"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parsetagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jOQ-cQ-8tZ">
-                                <rect key="frame" x="0.0" y="82" width="375" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="47"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="vmi-DX-lSQ">
-                                <rect key="frame" x="62" y="319" width="253" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.50679506067736657" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="6ZY-KJ-hIn"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="passwordField" destination="vmi-DX-lSQ" id="kJW-OB-QhE"/>
                         <outlet property="usernameField" destination="BdB-Sw-Ud7" id="WRX-ud-fzb"/>
-                        <segue destination="b2B-QI-pMF" kind="modal" identifier="loginSegue" id="8FU-Ap-dk4"/>
-                        <segue destination="b2B-QI-pMF" kind="modal" identifier="signUpSegue" id="6Rf-Hm-8Qr"/>
+                        <segue destination="b2B-QI-pMF" kind="modal" identifier="loggingInSegue" id="8FU-Ap-dk4"/>
+                        <segue destination="jPd-8V-Bhg" kind="modal" identifier="newUserSegue" id="ZUg-KF-Fjm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdW-5h-6xp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-980.5" y="-1382.5"/>
+            <point key="canvasLocation" x="-894.5" y="-1382.5"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="phA-ai-ZDi">
+            <objects>
+                <viewController id="jPd-8V-Bhg" customClass="SignUpViewController" customModule="Parsetagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RVT-5i-1kQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parsetagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4mx-uG-q2g">
+                                <rect key="frame" x="0.0" y="100" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="50"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" id="3vE-kc-xG3">
+                                <rect key="frame" x="62" y="265" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" id="jCW-kx-FCi">
+                                <rect key="frame" x="62" y="320" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" id="2sj-6G-c3R">
+                                <rect key="frame" x="62" y="375" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="XGl-RB-7tD">
+                                <rect key="frame" x="62" y="430" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NVX-l2-lRD">
+                                <rect key="frame" x="154" y="495" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSignUp:" destination="jPd-8V-Bhg" eventType="touchUpInside" id="PDi-Cm-SOm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="del-JK-i96">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Already have a Parsetagram? Login.">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Dhi-Q0-3Kn" kind="modal" id="pM0-Ca-geX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="0.75182845740000004" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xUv-Dq-IrW"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="emailField" destination="jCW-kx-FCi" id="Jvm-hu-Mjz"/>
+                        <outlet property="nameField" destination="3vE-kc-xG3" id="ykJ-N0-2pB"/>
+                        <outlet property="passwordField" destination="XGl-RB-7tD" id="Awb-MC-0N0"/>
+                        <outlet property="usernameField" destination="2sj-6G-c3R" id="oWh-KW-sJ4"/>
+                        <segue destination="Dhi-Q0-3Kn" kind="modal" identifier="userCreatedSegue" id="9bq-f6-Ote"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ed-k8-c8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1622.5" y="-1292.5"/>
         </scene>
         <!--Profile-->
         <scene sceneID="iM0-xX-cA9">
@@ -203,8 +332,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zQE-vN-gkK">
-                                <rect key="frame" x="133" y="198" width="55" height="30"/>
+                                <rect key="frame" x="285" y="75" width="70" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="Log Out"/>
                                 <connections>
                                     <action selector="onLogOut:" destination="v24-K9-6RM" eventType="touchUpInside" id="DQW-Ru-QOP"/>
@@ -212,7 +342,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.08396846583878359" green="1" blue="0.7534016371715454" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="profile" id="G05-n0-JgR"/>
                     <navigationItem key="navigationItem" id="OyD-fO-vbH"/>
@@ -220,7 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Alk-kW-4wm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-409.5" y="-567.5"/>
+            <point key="canvasLocation" x="-478.5" y="-517.5"/>
         </scene>
         <!--Navigation-->
         <scene sceneID="42E-Na-116">
@@ -232,6 +362,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Sb-19-7SP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="0.75182845740000004" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -248,19 +379,22 @@
                 <tabBarController storyboardIdentifier="TabBarView" title="Tab Bar" automaticallyAdjustsScrollViewInsets="NO" id="bBa-t9-utb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Parsetagram" id="9nH-P3-eoK"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="57w-VS-xJQ">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="XSa-BZ-xhJ" kind="relationship" relationship="viewControllers" id="3cO-qc-gUn"/>
+                        <segue destination="XSa-BZ-xhJ" kind="relationship" relationship="viewControllers" id="Bxh-WB-77w"/>
                         <segue destination="vlk-g8-dYG" kind="relationship" relationship="viewControllers" id="o6K-N1-4C1"/>
                         <segue destination="v24-K9-6RM" kind="relationship" relationship="viewControllers" id="1gq-vD-oki"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RUD-A7-fft" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="41.5" y="-1382.5"/>
+            <point key="canvasLocation" x="47.5" y="-1382.5"/>
         </scene>
     </scenes>
     <resources>
@@ -269,6 +403,7 @@
         <image name="profile" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Rf-Hm-8Qr"/>
+        <segue reference="8FU-Ap-dk4"/>
+        <segue reference="9bq-f6-Ote"/>
     </inferredMetricsTieBreakers>
 </document>

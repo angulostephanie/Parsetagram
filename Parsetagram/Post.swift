@@ -21,12 +21,12 @@ class Post: NSObject {
         //post["commentsCount"] = 0
         post.saveInBackgroundWithBlock{ (success: Bool, error: NSError?) -> Void in
             if success {
-                print(post["caption"])
-                print("Not an error")
+                print("Success! - Post class")
+                //performSegueWithIdentifier("uploadedSegue", sender: nil)
             }
             else {
                 print(error)
-                print("ERROR :(")
+                print("ERROR :( - Post class")
             }
         }
 
