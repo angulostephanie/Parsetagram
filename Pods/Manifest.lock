@@ -2,14 +2,17 @@ PODS:
   - Bolts/Tasks (1.7.0)
   - Parse (1.13.0):
     - Bolts/Tasks (~> 1.6)
+  - UIScrollView-InfiniteScroll (0.7.3)
 
 DEPENDENCIES:
   - Parse
+  - UIScrollView-InfiniteScroll
 
 SPEC CHECKSUMS:
   Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
   Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
+  UIScrollView-InfiniteScroll: b6c7d6d155dca7f9c5dd43813ecffeb301b3d50c
 
-PODFILE CHECKSUM: 6e5149bc70b1e6170dccccaeeec54b98223bf2e6
+PODFILE CHECKSUM: 1628f32fe435a9f8829dd5df4cfb66be34a02f4b
 
 COCOAPODS: 1.0.1

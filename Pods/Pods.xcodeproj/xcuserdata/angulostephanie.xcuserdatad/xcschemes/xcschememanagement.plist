@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UIScrollView-InfiniteScroll.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -42,7 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88EA10F7D1F93FE681FE823BCE1ADC96</key>
+		<key>30F0041698DE73D955F56F9A59D9190F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A0667D9262B1DBF4791FB1721E60412</key>
 		<dict>
 			<key>primary</key>
 			<true/>

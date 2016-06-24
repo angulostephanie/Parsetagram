@@ -4,7 +4,7 @@
 use_frameworks!
 target 'Parsetagram' do
     pod 'Parse'
-
+    pod 'UIScrollView-InfiniteScroll'
 
   # Pods for Parsetagram
 

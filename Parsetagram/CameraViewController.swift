@@ -13,9 +13,11 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var captionField: UITextField!
+    var size = CGSize(width: 150, height: 150)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,10 +43,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func imagePickerController(picker: UIImagePickerController,didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            photoView.contentMode = .ScaleAspectFit
-            photoView.image = pickedImage
-        }
+        let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+        photoView.contentMode = .ScaleAspectFit
+        photoView.image = resize(pickedImage!, newSize: size)
+        
         dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -61,6 +63,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func onUpload(sender: AnyObject) {
+        //let currentDate = NSDate()
+        
         let photo = photoView.image
         Post.newPost(photo, withCaption: captionField.text) { (success: Bool, error: NSError?) in
             if success {
@@ -72,6 +76,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
                 print("Did not upload - Camera View Controller")
                 //INSERT ALERT (CANNOT UPLOAD)
             }
+        }
+        if photo == nil {
+            print("you haven't uploaded an image yet dummy")
         }
     }
     

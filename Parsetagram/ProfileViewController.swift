@@ -12,9 +12,11 @@ var currentUser = PFUser.currentUser()
 
 class ProfileViewController: UIViewController {
 
+    //query.whereKey("user", equalTo: currentUser!.username!)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
 
@@ -27,6 +29,7 @@ class ProfileViewController: UIViewController {
     @IBAction func onLogOut(sender: AnyObject) {
         PFUser.logOutInBackgroundWithBlock { (error: NSError?) in
             // PFUser.currentUser() will now be nil
-        }    }
+        }
+    }
    
 }

@@ -11,7 +11,10 @@ import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var navBarFont = UIFont(name: "Avenir", size: 20) ?? UIFont.systemFontOfSize(20)
+    var navBarTextColor = UIColor.whiteColor()
+    var navBarBackgroundColor: String! = "CC0033"
+    var navBarAppearance = UINavigationBar.appearance()
     var window: UIWindow?
     var APP_ID: String! = "Parsetagram"
     var MASTER_KEY: String! = "jkdkjdfskksdka"
@@ -19,10 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //var currentUser = PFUser.currentUser()
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        //window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        
-        Parse.initializeWithConfiguration(
+            navBarAppearance.titleTextAttributes = [NSFontAttributeName: navBarFont, NSForegroundColorAttributeName: navBarTextColor]
+            navBarAppearance.tintColor = UIColor(red: 204.0/255.0, green :0.0/255.0, blue: 51.0/255.0, alpha: 1.0)
+            Parse.initializeWithConfiguration(
             ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
                 configuration.applicationId = self.APP_ID
                 configuration.clientKey = self.MASTER_KEY  // set to nil assuming you have not set clientKey
@@ -30,7 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         )
        
-        
         if PFUser.currentUser() != nil {
             let navBar = (self.window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("navigationBar"))! as UIViewController
             self.window?.rootViewController = navBar

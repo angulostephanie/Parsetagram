@@ -11,11 +11,13 @@ import Parse
 
 class LoginViewController: UIViewController {
     var userNameTakenError: Int! = 202
+    var invalidUsernamePassword: Int! = 101
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         //usernameField.becomeFirstResponder()
     }
 
@@ -31,7 +33,6 @@ class LoginViewController: UIViewController {
     
     @IBAction func onLogin(sender: AnyObject) {
         PFUser.logInWithUsernameInBackground(usernameField.text!, password: passwordField.text!) { (user: PFUser?, error: NSError?) -> Void in
-            
             if user != nil {
                 print("You are now logged in - Log View Controller")
             self.performSegueWithIdentifier("loggingInSegue", sender: nil)
@@ -41,6 +42,16 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onSignUp(sender: AnyObject) {
-        self.performSegueWithIdentifier("newUserSegue", sender: nil)    }
+        self.performSegueWithIdentifier("newUserSegue", sender: nil)
+    }
+}
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
     
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

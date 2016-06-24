@@ -23,6 +23,7 @@
 		3BB52C481D18864700B2268F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB52C471D18864700B2268F /* ProfileViewController.swift */; };
 		3BB52C4A1D18865000B2268F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB52C491D18865000B2268F /* CameraViewController.swift */; };
 		3BDBE82A1D19DECC001AB07E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBE8291D19DECC001AB07E /* Post.swift */; };
+		3BE962F41D1C7D8A00C8726F /* InitialNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE962F31D1C7D8A00C8726F /* InitialNavigationController.swift */; };
 		522B31B7ACE9305F3CB6001E /* Pods_Parsetagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF141DA4F301742B12FCD34 /* Pods_Parsetagram.framework */; };
 		F6F832BF1E1E176828AE8A1B /* Pods_ParsetagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584740766EAC86C0AF03BB92 /* Pods_ParsetagramTests.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		3BB52C471D18864700B2268F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3BB52C491D18865000B2268F /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		3BDBE8291D19DECC001AB07E /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		3BE962F31D1C7D8A00C8726F /* InitialNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialNavigationController.swift; sourceTree = "<group>"; };
 		53096DA6ED045C499535861E /* Pods-Parsetagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parsetagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Parsetagram/Pods-Parsetagram.debug.xcconfig"; sourceTree = "<group>"; };
 		584740766EAC86C0AF03BB92 /* Pods_ParsetagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParsetagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A67B33003B78839D8F3730 /* Pods-ParsetagramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParsetagramUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParsetagramUITests/Pods-ParsetagramUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,15 +132,15 @@
 		3BB52C171D186B0B00B2268F /* Parsetagram */ = {
 			isa = PBXGroup;
 			children = (
+				3BE962F51D1C7D9F00C8726F /* Post Files */,
 				3BB52C461D18862100B2268F /* ViewControllers */,
-				3BB52C181D186B0B00B2268F /* AppDelegate.swift */,
 				3B00668C1D1A009F005C5A7E /* Main.storyboard */,
-				3BB52C1F1D186B0B00B2268F /* Assets.xcassets */,
-				3BB52C211D186B0B00B2268F /* LaunchScreen.storyboard */,
-				3BB52C241D186B0B00B2268F /* Info.plist */,
+				3BB52C181D186B0B00B2268F /* AppDelegate.swift */,
+				3BE962F31D1C7D8A00C8726F /* InitialNavigationController.swift */,
 				3B6E80961D18A219007A624D /* TabBarController.swift */,
-				3BDBE8291D19DECC001AB07E /* Post.swift */,
-				3B61412D1D19E0AA00381E9B /* PostTableViewCell.swift */,
+				3BB52C1F1D186B0B00B2268F /* Assets.xcassets */,
+				3BB52C241D186B0B00B2268F /* Info.plist */,
+				3BB52C211D186B0B00B2268F /* LaunchScreen.storyboard */,
 			);
 			path = Parsetagram;
 			sourceTree = "<group>";
@@ -172,6 +174,15 @@
 				3B8968D51D1BBCD70017A739 /* SignUpViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3BE962F51D1C7D9F00C8726F /* Post Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBE8291D19DECC001AB07E /* Post.swift */,
+				3B61412D1D19E0AA00381E9B /* PostTableViewCell.swift */,
+			);
+			name = "Post Files";
 			sourceTree = "<group>";
 		};
 		3D36D60A97CC1E35BD991EB2 /* Frameworks */ = {
@@ -273,6 +284,7 @@
 				TargetAttributes = {
 					3BB52C141D186B0B00B2268F = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = MSDKGG6G29;
 					};
 					3BB52C281D186B0B00B2268F = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -463,6 +475,7 @@
 				3BB52C481D18864700B2268F /* ProfileViewController.swift in Sources */,
 				3BB52C4A1D18865000B2268F /* CameraViewController.swift in Sources */,
 				3BB52C1B1D186B0B00B2268F /* HomeViewController.swift in Sources */,
+				3BE962F41D1C7D8A00C8726F /* InitialNavigationController.swift in Sources */,
 				3B8968D61D1BBCD70017A739 /* SignUpViewController.swift in Sources */,
 				3B61412E1D19E0AA00381E9B /* PostTableViewCell.swift in Sources */,
 				3B6E80971D18A219007A624D /* TabBarController.swift in Sources */,
@@ -611,10 +624,13 @@
 			baseConfigurationReference = 53096DA6ED045C499535861E /* Pods-Parsetagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Parsetagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codePath.Parsetagram;
+				PRODUCT_BUNDLE_IDENTIFIER = angulostephanie21;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -623,10 +639,13 @@
 			baseConfigurationReference = FD9219F0120B0A61835D6730 /* Pods-Parsetagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Parsetagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codePath.Parsetagram;
+				PRODUCT_BUNDLE_IDENTIFIER = angulostephanie21;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

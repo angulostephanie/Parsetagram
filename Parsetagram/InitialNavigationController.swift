@@ -1,19 +1,18 @@
 //
-//  TabBarController.swift
+//  InitialNavigationController.swift
 //  Parsetagram
 //
-//  Created by Stephanie Angulo on 6/20/16.
+//  Created by Stephanie Angulo on 6/23/16.
 //  Copyright © 2016 Stephanie Angulo. All rights reserved.
 //
 
 import UIKit
 
-class TabBarController: UITabBarController {
+class InitialNavigationController: UINavigationController {
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
 
