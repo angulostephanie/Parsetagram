@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		33B51C6725C03A55D97DDAB1 /* Pods_ParsetagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A569816C8723202B9EB37EFE /* Pods_ParsetagramUITests.framework */; };
-		3B00668E1D1A009F005C5A7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B00668C1D1A009F005C5A7E /* Main.storyboard */; };
 		3B61412E1D19E0AA00381E9B /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B61412D1D19E0AA00381E9B /* PostTableViewCell.swift */; };
 		3B6E80951D18938B007A624D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E80941D18938B007A624D /* LoginViewController.swift */; };
 		3B6E80971D18A219007A624D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E80961D18A219007A624D /* TabBarController.swift */; };
@@ -22,6 +21,8 @@
 		3BB52C391D186B0B00B2268F /* ParsetagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB52C381D186B0B00B2268F /* ParsetagramUITests.swift */; };
 		3BB52C481D18864700B2268F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB52C471D18864700B2268F /* ProfileViewController.swift */; };
 		3BB52C4A1D18865000B2268F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB52C491D18865000B2268F /* CameraViewController.swift */; };
+		3BCA6DA61D1D9DA500120A8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BCA6DA41D1D9DA500120A8A /* Main.storyboard */; };
+		3BCA6DA81D1DE47400120A8A /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCA6DA71D1DE47400120A8A /* HomeNavigationController.swift */; };
 		3BDBE82A1D19DECC001AB07E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBE8291D19DECC001AB07E /* Post.swift */; };
 		3BE962F41D1C7D8A00C8726F /* InitialNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE962F31D1C7D8A00C8726F /* InitialNavigationController.swift */; };
 		522B31B7ACE9305F3CB6001E /* Pods_Parsetagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF141DA4F301742B12FCD34 /* Pods_Parsetagram.framework */; };
@@ -46,7 +47,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B00668D1D1A009F005C5A7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B61412D1D19E0AA00381E9B /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		3B6E80941D18938B007A624D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3B6E80961D18A219007A624D /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -66,6 +66,8 @@
 		3BB52C3A1D186B0B00B2268F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BB52C471D18864700B2268F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3BB52C491D18865000B2268F /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		3BCA6DA51D1D9DA500120A8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BCA6DA71D1DE47400120A8A /* HomeNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
 		3BDBE8291D19DECC001AB07E /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		3BE962F31D1C7D8A00C8726F /* InitialNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialNavigationController.swift; sourceTree = "<group>"; };
 		53096DA6ED045C499535861E /* Pods-Parsetagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parsetagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Parsetagram/Pods-Parsetagram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,9 +136,10 @@
 			children = (
 				3BE962F51D1C7D9F00C8726F /* Post Files */,
 				3BB52C461D18862100B2268F /* ViewControllers */,
-				3B00668C1D1A009F005C5A7E /* Main.storyboard */,
+				3BCA6DA41D1D9DA500120A8A /* Main.storyboard */,
 				3BB52C181D186B0B00B2268F /* AppDelegate.swift */,
 				3BE962F31D1C7D8A00C8726F /* InitialNavigationController.swift */,
+				3BCA6DA71D1DE47400120A8A /* HomeNavigationController.swift */,
 				3B6E80961D18A219007A624D /* TabBarController.swift */,
 				3BB52C1F1D186B0B00B2268F /* Assets.xcassets */,
 				3BB52C241D186B0B00B2268F /* Info.plist */,
@@ -321,7 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B00668E1D1A009F005C5A7E /* Main.storyboard in Resources */,
+				3BCA6DA61D1D9DA500120A8A /* Main.storyboard in Resources */,
 				3BB52C231D186B0B00B2268F /* LaunchScreen.storyboard in Resources */,
 				3BB52C201D186B0B00B2268F /* Assets.xcassets in Resources */,
 			);
@@ -481,6 +484,7 @@
 				3B6E80971D18A219007A624D /* TabBarController.swift in Sources */,
 				3B6E80951D18938B007A624D /* LoginViewController.swift in Sources */,
 				3BDBE82A1D19DECC001AB07E /* Post.swift in Sources */,
+				3BCA6DA81D1DE47400120A8A /* HomeNavigationController.swift in Sources */,
 				3BB52C191D186B0B00B2268F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,20 +521,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3B00668C1D1A009F005C5A7E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B00668D1D1A009F005C5A7E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3BB52C211D186B0B00B2268F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3BB52C221D186B0B00B2268F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3BCA6DA41D1D9DA500120A8A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BCA6DA51D1D9DA500120A8A /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

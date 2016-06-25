@@ -41,6 +41,12 @@ class SignUpViewController: UIViewController {
                 print(error?.localizedDescription)
                 if error?.code == self.userNameTakenError {
                     print("Username has already been taken - Sign Up View Controller")
+                    let alertController = UIAlertController(title: "Username has already been taken", message: "", preferredStyle: .Alert)
+                    let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+                        
+                    }
+                    alertController.addAction(cancelAction)
+                    self.presentViewController(alertController, animated: true) { }
                 }
             }
             

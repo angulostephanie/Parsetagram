@@ -12,8 +12,8 @@ import Parse
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var navBarFont = UIFont(name: "Avenir", size: 20) ?? UIFont.systemFontOfSize(20)
-    var navBarTextColor = UIColor.whiteColor()
-    var navBarBackgroundColor: String! = "CC0033"
+    //var navBarTextColor = UIColor.whiteColor()
+    //var navBarBackgroundColor: String! = "CC0033"
     var navBarAppearance = UINavigationBar.appearance()
     var window: UIWindow?
     var APP_ID: String! = "Parsetagram"
@@ -22,8 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //var currentUser = PFUser.currentUser()
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-            navBarAppearance.titleTextAttributes = [NSFontAttributeName: navBarFont, NSForegroundColorAttributeName: navBarTextColor]
-            navBarAppearance.tintColor = UIColor(red: 204.0/255.0, green :0.0/255.0, blue: 51.0/255.0, alpha: 1.0)
+            navBarAppearance.titleTextAttributes = [NSFontAttributeName: navBarFont]
             Parse.initializeWithConfiguration(
             ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
                 configuration.applicationId = self.APP_ID

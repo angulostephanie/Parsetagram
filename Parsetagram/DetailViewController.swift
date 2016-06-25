@@ -7,14 +7,46 @@
 //
 
 import UIKit
+import Parse
 
 class DetailViewController: UIViewController {
-
+    var post: PFObject!
+    
+   
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var usernameLabel2: UILabel!
+    @IBOutlet weak var photoView: UIImageView!
+    @IBOutlet weak var captionLabel: UILabel!
+    
+    //@IBOutlet weak var photoView: UIImageView!
+    //@IBOutlet weak var usernameLabel2: UILabel!
+    //@IBOutlet weak var captionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
+//        self.hideKeyboardWhenTappedAround()
+        importData()
         // Do any additional setup after loading the view.
     }
+    func importData() {
+        //let post = self.posts![indexPath.row]
+        let user = post["user"] as? PFUser
+        let caption = post["caption"] as! String?
+        
+        if let photo = post["media"] {
+            let imagePFFIle = photo as! PFFile
+            imagePFFIle.getDataInBackgroundWithBlock({(imageData: NSData?, error: NSError?) -> Void in
+                if error == nil {
+                    if let imageData = imageData {
+                        let image = UIImage(data:imageData)
+                        self.photoView.image = image
+                        self.usernameLabel.text = user?.username
+                        self.usernameLabel2.text = user?.username
+                        self.captionLabel.text = caption
+                    }
+                }
+            })
+        }    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

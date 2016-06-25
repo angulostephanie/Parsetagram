@@ -13,7 +13,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var captionField: UITextField!
-    var size = CGSize(width: 150, height: 150)
+    var size = CGSizeMake(600, 600)
     
     override func viewDidLoad() {
         super.viewDidLoad()

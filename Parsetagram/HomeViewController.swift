@@ -13,10 +13,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
+//        self.hideKeyboardWhenTappedAround()
         tableView.dataSource = self
         tableView.delegate = self
-        self.networkerrorLabel.hidden = true
+   //     self.networkerrorLabel.hidden = true
         NSTimer.scheduledTimerWithTimeInterval(5, target:  self, selector: #selector(HomeViewController.onTimer), userInfo: nil, repeats: true)
         
         loadPosts()
@@ -26,6 +26,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.insertSubview(refreshControl, atIndex: 0)
     }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPathForCell(cell)
+        let post = posts![indexPath!.row]
+        let detailViewController = segue.destinationViewController as! DetailViewController
+        detailViewController.post = post
+        print("prepare for segue has been called")
+        
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -43,8 +54,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             tableView.finishInfiniteScroll()
         }
     }
-
-    
     
     func loadPosts() {
         let query = PFQuery(className:"Post")
@@ -69,9 +78,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         refreshControl.endRefreshing()
     }
     
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("postCell", forIndexPath: indexPath) as! PostTableViewCell
-        
         let post = self.posts![indexPath.row]
         let user = post["user"] as? PFUser
         let caption = post["caption"] as! String?
@@ -85,7 +94,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                         cell.photoView.image = image
                         cell.usernameLabel.text = user?.username
                         cell.usernameLabel2.text = user?.username
-                        cell.captionLabel.text = caption
+                        cell.captionLabel.text = caption                        
                     }
                 }
             })
@@ -99,34 +108,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts?.count ?? 0
     }
-    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let deselectedCell = tableView.cellForRowAtIndexPath(indexPath)!
+        deselectedCell.backgroundColor = UIColor.clearColor()
+        
+    }
     func onTimer() {
        self.tableView.reloadData()
    }
     
-    
-//    //what is this controller lol
-//    class ButtonViewController: UIViewController {
-//        
-//        @IBOutlet weak var closeButton: UIButton!
-//        
-//        override func viewDidLoad() {
-//            super.viewDidLoad()
-//            // Do any additional setup after loading the view, typically from a nib.
-//        }
-//        
-//        override func didReceiveMemoryWarning() {
-//            super.didReceiveMemoryWarning()
-//            // Dispose of any resources that can be recreated.
-//            
-//        }
-//        
-//        //should close modal view
-//        @IBAction func didTapCloseButton(sender: AnyObject) {
-//            dismissViewControllerAnimated(true, completion: nil)
-//        }
-//        
-//    }
     
 
 }
