@@ -15,7 +15,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     var posts: [PFObject]?
     //var homeView = HomeViewController()
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var profileUsernameLabel: UILabel!
     
     
@@ -58,6 +57,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     func loadPosts() {
         let query = PFQuery(className:"Post")
         query.orderByDescending("createdAt")
+        query.includeKey("user")
         query.whereKey("user", equalTo: PFUser.currentUser()!)
         query.limit = initialLimit
         query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error:NSError?) in
@@ -77,22 +77,28 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         refreshControl.endRefreshing()
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("profileCell", forIndexPath: indexPath) as! PostTableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("profileCell", forIndexPath: indexPath) as! ProfileTableViewCell
         
         let post = self.posts![indexPath.row]
         let user = post["user"] as? PFUser
         let caption = post["caption"] as! String?
+        cell.usernameLabel.text = user?.username
+        print("hello")
+        cell.usernameLabel2.text = user?.username
+        cell.captionLabel.text = caption
         
         if let photo = post["media"] {
            let imagePFFIle = photo as! PFFile
            imagePFFIle.getDataInBackgroundWithBlock({(imageData: NSData?, error: NSError?) -> Void in
                 if error == nil {
                     if let imageData = imageData {
+                        
                         let image = UIImage(data:imageData)
                         cell.photoView.image = image
-                        cell.usernameLabel.text = user?.username
-                        cell.usernameLabel2.text = user?.username
-                        cell.captionLabel.text = caption
+                        
+                        
+                        
+                        print("\(caption)")
                     }
                 }
             })

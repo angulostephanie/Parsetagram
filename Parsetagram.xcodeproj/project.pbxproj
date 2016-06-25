@@ -23,6 +23,7 @@
 		3BB52C4A1D18865000B2268F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB52C491D18865000B2268F /* CameraViewController.swift */; };
 		3BCA6DA61D1D9DA500120A8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BCA6DA41D1D9DA500120A8A /* Main.storyboard */; };
 		3BCA6DA81D1DE47400120A8A /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCA6DA71D1DE47400120A8A /* HomeNavigationController.swift */; };
+		3BCA6DAC1D1E0B4500120A8A /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCA6DAB1D1E0B4500120A8A /* ProfileTableViewCell.swift */; };
 		3BDBE82A1D19DECC001AB07E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBE8291D19DECC001AB07E /* Post.swift */; };
 		3BE962F41D1C7D8A00C8726F /* InitialNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE962F31D1C7D8A00C8726F /* InitialNavigationController.swift */; };
 		522B31B7ACE9305F3CB6001E /* Pods_Parsetagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF141DA4F301742B12FCD34 /* Pods_Parsetagram.framework */; };
@@ -68,6 +69,7 @@
 		3BB52C491D18865000B2268F /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		3BCA6DA51D1D9DA500120A8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3BCA6DA71D1DE47400120A8A /* HomeNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
+		3BCA6DAB1D1E0B4500120A8A /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		3BDBE8291D19DECC001AB07E /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		3BE962F31D1C7D8A00C8726F /* InitialNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialNavigationController.swift; sourceTree = "<group>"; };
 		53096DA6ED045C499535861E /* Pods-Parsetagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parsetagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Parsetagram/Pods-Parsetagram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				3BDBE8291D19DECC001AB07E /* Post.swift */,
 				3B61412D1D19E0AA00381E9B /* PostTableViewCell.swift */,
+				3BCA6DAB1D1E0B4500120A8A /* ProfileTableViewCell.swift */,
 			);
 			name = "Post Files";
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				3B61412E1D19E0AA00381E9B /* PostTableViewCell.swift in Sources */,
 				3B6E80971D18A219007A624D /* TabBarController.swift in Sources */,
 				3B6E80951D18938B007A624D /* LoginViewController.swift in Sources */,
+				3BCA6DAC1D1E0B4500120A8A /* ProfileTableViewCell.swift in Sources */,
 				3BDBE82A1D19DECC001AB07E /* Post.swift in Sources */,
 				3BCA6DA81D1DE47400120A8A /* HomeNavigationController.swift in Sources */,
 				3BB52C191D186B0B00B2268F /* AppDelegate.swift in Sources */,

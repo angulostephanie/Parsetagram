@@ -9,7 +9,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     //var isMoreDataLoading = false
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var networkerrorLabel: UILabel!
+   // @IBOutlet weak var networkerrorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
