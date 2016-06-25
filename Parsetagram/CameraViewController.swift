@@ -66,6 +66,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         //let currentDate = NSDate()
         
         let photo = photoView.image
+        
         Post.newPost(photo, withCaption: captionField.text) { (success: Bool, error: NSError?) in
             if success {
                 print("Success - Camera View Controller")

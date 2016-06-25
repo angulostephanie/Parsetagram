@@ -17,6 +17,8 @@ class Post: NSObject {
         post["user"] = PFUser.currentUser()
         post["media"] = getPFFileFromImage(image)
         post["caption"] = caption
+        post["creationTime"] = NSDate()
+        
 //        post["data"] = getDate(date)
         post["likesCount"] = 0
         //post["commentsCount"] = 0
